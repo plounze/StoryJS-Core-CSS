@@ -1,7 +1,7 @@
 /* Typography.less
  * Headings, body text, lists, etc
  * ---------------------------------------------------------------------------------------- */
-
+ 
 .vco-storyjs {
 	font-size: @base-font;
 	font-weight: normal;
@@ -151,7 +151,6 @@
 	
 	/* BLOCKQUOTES
 	================================================== */
-	
 	blockquote, blockquote p {
 		font-size: @base-font-large;
 		line-height: @base-line-large;
@@ -165,7 +164,6 @@
 	
 	/* Caption and Credits
 	================================================== */
-	
 	.credit {
 		color: @color-credit;
 		text-align: right;
@@ -185,4 +183,15 @@
 	}
 	
 	
+}
+
+/* Right to Left
+ * ---------------------------------------------------------------------------------------- */
+.vco-storyjs.vco-right-to-left {
+	h1, h2, h3, h4, h5, h6, p, blockquote, div, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, 
+	sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td, 
+	.vco-container, .content-container, .media, .text, .vco-slider, .slider, .date, .title, .messege, .map, .credit, .caption, .vco-feedback, .vco-feature, .toolbar, 
+	.marker, .dot, .line, .flag, .time, .era, .major, .minor, .vco-navigation, .start, .active  {
+		direction:rtl;
+	}
 }
