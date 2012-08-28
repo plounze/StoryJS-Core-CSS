@@ -18,7 +18,19 @@
 	sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td, 
 	.vco-container, .content-container, .media, .text, .vco-slider, .slider, .date, .title, .messege, .map, .credit, .caption, .vco-feedback, .vco-feature, .toolbar, 
 	.marker, .dot, .line, .flag, .time, .era, .major, .minor, .vco-navigation, .start, .active  {
-		margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-size: 100%; line-height: 1; font-family: inherit; width: auto;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-weight: normal;
+		font-style: normal;
+		font-size: 100%;
+		line-height: 1;
+		font-family: inherit;
+		width: auto;
+		float:none;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		clear:none;
 	}
 	table { border-collapse: collapse; border-spacing: 0;}
 	ol, ul { list-style: none;}
@@ -26,19 +38,19 @@
 	a:focus { outline: thin dotted; }
 	a:hover, a:active { outline: 0;}
 	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-	  display: block;
+		display: block;
 	}
 	audio, canvas, video {
-	  display: inline-block;
-	  *display: inline;
-	  *zoom: 1;
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
 	}
 
 	/*	Prevents modern browsers from displaying 'audio' without controls
 		Based on: http://github.com/necolas/normalize.css
 	------------------------------------------------------------------------------------------- */
 	audio:not([controls]) {
-	    display: none;
+		display: none;
 	}
 	div {
 		max-width:none;
@@ -48,24 +60,24 @@
 		Based on: http://github.com/necolas/normalize.css
 	------------------------------------------------------------------------------------------- */
 	sub, sup {
-	  font-size: 75%;
-	  line-height: 0;
-	  position: relative;
-	  vertical-align: baseline;
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
 	}
 	sup {
-	  top: -0.5em;
+		top: -0.5em;
 	}
 	sub {
-	  bottom: -0.25em;
+		bottom: -0.25em;
 	}
 
 	/*	Img border in a's and image quality
 		Based on: http://github.com/necolas/normalize.css
 	------------------------------------------------------------------------------------------- */
 	img {
-	    border: 0;
-	    -ms-interpolation-mode: bicubic;
+		border: 0;
+		-ms-interpolation-mode: bicubic;
 	}
 
 	/*	Forms
