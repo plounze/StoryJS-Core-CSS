@@ -1,5 +1,119 @@
 /*	Slider
-------------------------------------------------------------------------------------------- */
+================================================== */
+
+/* MEDIA QUERIES
+================================================== */
+
+// Mobile and iPhone
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	.vco-slider {
+		.nav-next, .nav-previous {
+			display:none;
+		}
+	}
+
+}
+
+// BELOW 640px
+@media (max-width: 640px) {
+	.vco-slider {
+		.slider-item {
+			.content {
+				.layout-text-media {
+					.text {
+						.container {
+							text-align:center !important;
+						}
+
+					}
+					h2, h3 {
+						display:block !important;
+						width:100% !important;
+						text-align:center !important;
+					}
+					
+				}
+				.content-container {
+					display:block;
+					.text {
+						width:100%;
+						max-width:100%;
+						min-width:120px;
+						display:block;
+						.container {
+							display:block;
+							-webkit-hyphens:auto;
+							   -moz-hyphens:auto;
+							    -ms-hyphens:auto;
+							        hyphens:auto;
+							word-wrap:break-word;
+						}
+					}
+					.media {
+						width:100%;
+						min-width:50%;
+						float: none;
+						.media-wrapper {
+							margin-left:0px;
+							margin-right:0px;
+							width:100%;
+							display:block;
+							.media-container {
+								img, iframe {
+
+								}
+							}
+						}
+					}
+
+				}
+				.content-container.layout-text {
+
+				}
+				.content-container.layout-media {
+
+				}
+			}
+		}
+	}
+	.vco-notouch {
+		.vco-slider {
+			.nav-previous, .nav-next {
+				z-index:203;
+				.nav-container {
+					.date, .title {
+						.opacity(1);
+					}
+					.icon {
+						.opacity(15);
+					}
+				}
+			}
+			.nav-previous {
+				.icon {
+					.icon-previous-light();
+				}
+			}
+			.nav-next {
+				.icon {
+					.icon-next-light();
+				}
+			}
+			.nav-previous:hover, .nav-next:hover {
+				color:#FFF !important;
+				text-shadow: #000 1px 1px 2px;
+				.nav-container {
+					.icon, .date, .title {
+						font-weight: bold;
+						.opacity(100);
+					}
+					
+				}
+			}
+			
+		}
+	}
+}
 
 /* SLIDER CONTAINERS 
 ================================================== */
@@ -86,6 +200,7 @@
 		
 	}
 }
+
 /* SLIDER ELEMENTS
 ================================================== */
 .vco-slider {
@@ -158,7 +273,7 @@
 		text-align:right;
 		.icon {
 			margin-left: @feature-nav-width - @base-space - @feature-nav-icon-wh;
-			.icon-next()
+			.icon-next();
 		}
 		.date, .title {
 			text-align:right;
@@ -233,10 +348,7 @@
 						vertical-align:middle;
 						text-align:left;
 						p {
-							-webkit-hyphens:auto;
-							   -moz-hyphens:auto;
-							    -ms-hyphens:auto;
-							        hyphens:auto;
+							.hyphens(auto);
 							word-wrap:break-word;
 						}
 						h2.date {
@@ -252,9 +364,7 @@
 							font-weight: bold;
 							color: @color-base;
 							background-color: lighten(@color-feature-date, 20%);
-							-webkit-border-radius: 3px;
-							   -moz-border-radius: 3px;
-							        border-radius: 3px;
+							.border-radius(3px);
 							vertical-align: baseline;
 							white-space: nowrap;
 							//text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -313,21 +423,11 @@
 								top: 80%;
 								max-width:300px;
 								background: @color-dark-fourth;
-								-webkit-box-shadow: 0 15px 10px @color-dark-fourth;
-								   -moz-box-shadow: 0 15px 10px @color-dark-fourth;
-								        box-shadow: 0 15px 10px @color-dark-fourth;
-								-webkit-transform: rotate(-2deg);
-								   -moz-transform: rotate(-2deg);
-								     -o-transform: rotate(-2deg);
-								    -ms-transform: rotate(-2deg);
-								        transform: rotate(-2deg);
+								.box-shadow(0 15px 10px @color-dark-fourth);
+								.transform(rotate(-2deg));
 							}
 							.media-shadow::after {
-								-webkit-transform: rotate(2deg);
-								   -moz-transform: rotate(2deg);
-								     -o-transform: rotate(2deg);
-								    -ms-transform: rotate(2deg);
-								        transform: rotate(2deg);
+								.transform(rotate(2deg));
 								right: 10px;
 								left: auto;
 							}
@@ -381,10 +481,7 @@
 									max-height:none !important;
 									max-width:none !important;
 									border:0;
-									-webkit-box-shadow: none;
-									   -moz-box-shadow: none;
-									        box-shadow: none;
-									
+									.box-shadow(none);
 								}
 								.google-map {
 									height:100%;
@@ -660,3 +757,5 @@
 		}
 	}
 }
+
+
