@@ -91,8 +91,8 @@
 					.opacity(1);
 				}
 				.icon {
-					//.opacity(15);
-					.opacity(50);
+					.opacity(15);
+					//.opacity(50);
 				}
 			}
 		}
@@ -109,20 +109,24 @@
 			}
 		}
 		.nav-previous:hover, .nav-next:hover {
-			color:#FFF !important;
+			color:@color-nav-date !important;
 			//text-shadow: #000 1px 1px 2px;
 			//text-shadow: #FFF 1px 1px 1px;
+			background-color:@color-dark-second;
+			background-color: fade(@color-dark, 65%);
+			.border-radius(10px);
 			.nav-container {
-				background-color:@color-dark-second;
-				.border-radius(10px);
 				.icon, .date, .title {
-					background-color:@color-dark-second;
 					.border-radius(10px);
 					font-weight: bold;
 					.opacity(100);
 				}
 				.title {
 					padding-bottom:5px;
+				}
+				.date, .title {
+					padding-left:5px;
+					padding-right:5px;
 				}
 					
 			}
