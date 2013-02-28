@@ -135,6 +135,26 @@
 	}
 }
 
+/* RETINA
+================================================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	.vco-skinny.vco-notouch {
+		.vco-slider {
+			.nav-previous {
+				.icon {
+					.icon-previous-light2x();
+				}
+			}
+			.nav-next {
+				.icon {
+					.icon-next-light2x();
+				}
+			}
+		}
+	}
+}
+
 /* SLIDER CONTAINERS 
 ================================================== */
 .vco-slider {
@@ -303,7 +323,23 @@
 	
 }
 
-
+/* RETINA
+================================================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	.vco-slider {
+		.nav-previous {
+			.icon {
+				.icon-previous2x();
+			}
+		}
+		.nav-next {
+			.icon {
+				.icon-next2x();
+			}
+		}
+	}
+}
 /* SLIDE CONTENT
 ================================================== */
 .vco-slider {

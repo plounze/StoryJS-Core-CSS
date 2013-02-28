@@ -2,7 +2,18 @@
 	GFX
 	Icons etc
 ----------------------------------------------------------------- */
-
+.thumbnail {
+	.base-sprite();
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	.thumbnail {
+		/* Reference the @2x Sprite */
+		.base-sprite2x();
+		/* Translate the @2x sprite's dimensions back to 1x */
+		background-size: 352px 260px; 
+	}
+}
 /*	Feature Navigation
 ----------------------------------------------------------------- */
 .icon-previous() {
@@ -12,9 +23,23 @@
 	background-position: -160px 0; width: 24px; height: 24px;
 	overflow:hidden;
 }
+.icon-previous2x() {
+	height:24px;
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -160px 0; width: 24px; height: 24px;
+	overflow:hidden;
+}
 
 .icon-next() {
 	.base-sprite();
+	background-repeat:no-repeat;
+	background-position: -184px 0; width: 24px; height: 24px;
+	height:24px;
+	overflow:hidden;
+}
+.icon-next2x() {
+	.base-sprite2x();
 	background-repeat:no-repeat;
 	background-position: -184px 0; width: 24px; height: 24px;
 	height:24px;
@@ -28,6 +53,13 @@
 	background-position: -208px 0; width: 24px; height: 24px;
 	overflow:hidden;
 }
+.icon-previous-light2x() {
+	height:24px;
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -208px 0; width: 24px; height: 24px;
+	overflow:hidden;
+}
 
 .icon-next-light() {
 	.base-sprite();
@@ -36,6 +68,14 @@
 	height:24px;
 	overflow:hidden;
 }
+.icon-next-light2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -232px 0; width: 24px; height: 24px;
+	height:24px;
+	overflow:hidden;
+}
+
 /*	TimeNav Navigation
 ----------------------------------------------------------------- */
 .icon-zoom-in() {
@@ -43,13 +83,30 @@
 	background-repeat:no-repeat;
 	background-position: -256px 0; width: 24px; height: 24px;
 }
+.icon-zoom-in2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -256px 0; width: 24px; height: 24px;
+}
+
 .icon-zoom-out() {
 	.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -280px 0; width: 24px; height: 24px;
 }
+.icon-zoom-out2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -280px 0; width: 24px; height: 24px;
+}
+
 .icon-back-home() {
 	.base-sprite();
+	background-repeat:no-repeat;
+	background-position: -328px 0; width: 24px; height: 24px;
+}
+.icon-back-home2x() {
+	.base-sprite2x();
 	background-repeat:no-repeat;
 	background-position: -328px 0; width: 24px; height: 24px;
 }
@@ -61,18 +118,41 @@
 	background-repeat:no-repeat;
 	background-position: -208px -160px; width: 40px; height: 40px;
 }
+.icon-touch-zoom-in2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -208px -160px; width: 40px; height: 40px;
+}
+
 .icon-touch-zoom-out() {
 	.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -256px -160px; width: 40px; height: 40px;
 }
+.icon-touch-zoom-out2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -256px -160px; width: 40px; height: 40px;
+}
+
 .icon-touch-back-home() {
 	.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -304px -160px; width: 40px; height: 40px;
 }
+.icon-touch-back-home2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -304px -160px; width: 40px; height: 40px;
+}
+
 .icon-touch-gesture() {
 	.base-sprite();
+	background-repeat:no-repeat;
+	background-position: -160px -160px; width: 48px; height: 48px;
+}
+.icon-touch-gesture2x() {
+	.base-sprite2x();
 	background-repeat:no-repeat;
 	background-position: -160px -160px; width: 48px; height: 48px;
 }
@@ -83,18 +163,41 @@
 	background-repeat:no-repeat;
 	background-position: 0 0; width:153px; height: 53px;
 }
+.time-flag2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: 0 0; width:153px; height: 53px;
+}
+
 .time-flag-active() {
 	.base-sprite();
 	background-repeat:no-repeat;
 	background-position: 0 -53px; width:153px; height: 53px;
 }
+.time-flag-active2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: 0 -53px; width:153px; height: 53px;
+}
+
 .time-flag-small() {
 	.base-sprite();
 	background-repeat:no-repeat;
 	background-position: 0 -135px; width:153px; height: 26px;
 }
+.time-flag-small2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: 0 -135px; width:153px; height: 26px;
+}
+
 .time-flag-small-active() {
 	.base-sprite();
+	background-repeat:no-repeat;
+	background-position: 0 -109px; width:153px; height: 26px;
+}
+.time-flag-small-active2x() {
+	.base-sprite2x();
 	background-repeat:no-repeat;
 	background-position: 0 -109px; width:153px; height: 26px;
 }
@@ -102,87 +205,87 @@
 /*	Thumbnail Icons
 ----------------------------------------------------------------- */
 .icon-map() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -208px -24px;
 }
 .icon-mappin() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -208px -48px;
 }
 .icon-website() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -232px -24px; 
 }
 .icon-document() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -256px -48px;
 }
 .icon-quote() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -232px -48px;
 }
 .icon-plaintext() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -280px -48px;
 }
 .icon-twitter() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -256px -24px;
 }
 .icon-video() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -328px -24px;
 }
 .icon-audio() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -304px -24px;
 }
 .icon-photo() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -280px -24px; 
 }
 .icon-link() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -184px -72px; 
 }
 .icon-storify() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -328px -96px; 
 }
 .icon-wikipedia() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -184px -48px; 
 }
 .icon-instagram() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -208px -96px; 
 }
 .icon-googleplus() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -208px -72px;
 }
 .icon-vimeo() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -328px -48px;
 }
 .icon-youtube() {
-	.base-sprite();
+	//.base-sprite();
 	background-repeat:no-repeat;
 	background-position: -328px -72px; 
 }
@@ -316,7 +419,13 @@
 	width:24px;
 	height:24px;
 }
-
+.icon-currenttime2x() {
+	.base-sprite2x();
+	background-repeat:no-repeat;
+	background-position: -160px -48px;
+	width:24px;
+	height:24px;
+}
 /*	Time Tics
 ----------------------------------------------------------------- */
 .background-time-tic() {

@@ -378,7 +378,23 @@
 }
 
 
-
+/* RETINA
+================================================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+	.vco-storyjs {
+		div.vco-loading, div.vco-explainer {
+			.vco-loading-container, .vco-explainer-container {
+				.vco-loading-icon {
+					.loading-sprite2x();
+				}
+				.vco-gesture-icon {
+					.icon-touch-gesture2x();
+				}
+			}
+		}
+	}
+}
 
 
 
